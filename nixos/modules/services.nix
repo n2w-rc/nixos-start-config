@@ -3,7 +3,6 @@
 {
     services = {
         flatpak.enable = true;
-        xserver.enable = true;
         pulseaudio.enable = false;
         openssh.enable = true;
         pipewire = {
@@ -15,4 +14,5 @@
         displayManager.sddm.enable = true;
         desktopManager.plasma6.enable = true;
     };
+
 }

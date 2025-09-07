@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
@@ -6,6 +6,9 @@
       ./hardware-configuration.nix
       # Adds things inside modules.
       ./modules/index.nix
+      # Adds the desktop settings separated.
+      ./desktop/desktop-settings.nix
+      inputs.stylix.nixosModules.stylix
     ];
 
   # Configure Nix package and enable flakes and nix-command
@@ -17,6 +20,31 @@
   boot.loader.systemd-boot.enable = false;
   boot.loader.efi.canTouchEfiVariables = true;
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+
+  # OR
+
+  stylix.base16Scheme = {
+    base00 = "282828";
+    base01 = "3c3836";
+    base02 = "504945";
+    base03 = "665c54";
+    base04 = "bdae93";
+    base05 = "d5c4a1";
+    base06 = "ebdbb2";
+    base07 = "fbf1c7";
+    base08 = "fb4934";
+    base09 = "fe8019";
+    base0A = "fabd2f";
+    base0B = "b8bb26";
+    base0C = "8ec07c";
+    base0D = "83a598";
+    base0E = "d3869b";
+    base0F = "d65d0e";
+  };
+
+  # Don't forget to apply wallpaper
+
+  stylix.image = ./kita.png;
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -48,7 +76,6 @@
   # Enable CUPS to print documents.
   # services.printing.enable = true; <- I definitely don't need a printing service.
 
-  # Enable sound with pipewire.
   security.rtkit.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).

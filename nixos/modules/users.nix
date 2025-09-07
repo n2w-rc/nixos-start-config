@@ -5,7 +5,7 @@
         isNormalUser = true;
         description = "n2w-rc";
         extraGroups = [ "networkmanager" "wheel" ];
-        shell = pkgs.zsh; # Set zsh as the default login shell
+        shell = pkgs.nushell; # Set zsh as the default login shell
         openssh.authorizedKeys.keys = [
             "empty-string"
         ];

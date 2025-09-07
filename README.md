@@ -1,2 +1,73 @@
 # nixos-start-config
 My NixOS configuration for applying in a different machine.
+
+Tree:
+```
+.
+├── home-manager
+│   ├── flake.lock
+│   ├── flake.nix
+│   ├── home.nix
+│   ├── modules
+│   │   ├── default.nix
+│   │   └── packages.nix
+│   └── shell
+│       ├── alacritty.nix
+│       ├── default.nix
+│       ├── nu
+│       │   └── oh-my-posh.nix
+│       ├── starship.nix
+│       └── zsh.nix
+├── hyprland
+│   ├── hypr
+│   │   ├── hyprland.conf
+│   │   ├── hyprlock.conf
+│   │   ├── hyprpaper.conf
+│   │   └── README.md
+│   └── waybar
+│       ├── config.jsonc
+│       └── style.css
+├── LICENSE
+├── nixos
+│   ├── configuration.nix
+│   ├── desktop
+│   │   └── desktop-settings.nix
+│   ├── flake.lock
+│   ├── flake.nix
+│   ├── hardware-configuration.nix
+│   ├── hardware-configuration.nix.bak
+│   ├── kita.png
+│   └── modules
+│       ├── fonts.nix
+│       ├── hardware.nix
+│       ├── index.nix
+│       ├── networking.nix
+│       ├── packages.nix
+│       ├── programs.nix
+│       ├── services.nix
+│       └── users.nix
+├── nvim
+│   ├── init.lua
+│   ├── lazy-lock.json
+│   ├── lua
+│   │   ├── community.lua
+│   │   ├── lazy_setup.lua
+│   │   ├── plugins
+│   │   │   ├── astrocore.lua
+│   │   │   ├── astrolsp.lua
+│   │   │   ├── astroui.lua
+│   │   │   ├── catppuccin.lua
+│   │   │   ├── mason.lua
+│   │   │   ├── none-ls.lua
+│   │   │   ├── toggleterm.lua
+│   │   │   ├── treesitter.lua
+│   │   │   └── user.lua
+│   │   └── polish.lua
+│   ├── neovim.yml
+│   ├── README.md
+│   └── selene.toml
+├── README.md
+└── tree.txt
+
+14 directories, 51 files
+```
