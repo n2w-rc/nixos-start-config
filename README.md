@@ -46,6 +46,10 @@ Tree:
 │       ├── programs.nix
 │       ├── services.nix
 │       └── users.nix
+├── nushell
+│   ├── config.nu
+│   ├── env.nu
+│   └── README.md
 ├── nvim
 │   ├── init.lua
 │   ├── lazy-lock.json
@@ -69,5 +73,5 @@ Tree:
 ├── README.md
 └── tree.txt
 
-14 directories, 51 files
+15 directories, 54 files
 ```
