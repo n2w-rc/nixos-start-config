@@ -5,9 +5,12 @@
   environment.systemPackages = with pkgs; [
   vim
   os-prober
-  flatpak # Loonix store.
+  flatpak # Lunix store.
   proton-pass
   protonvpn-gui
+  kdePackages.polkit-kde-agent-1
+  udisks2
+  gvfs
   efibootmgr # I don't want to bother going to UEFI settings to boot into NixOS, so here it is.
   # Fonts, lowkey important if you don't want to see a block of whatever.
   noto-fonts
@@ -16,7 +19,7 @@
   fira-code
   noto-fonts-emoji
   dejavu_fonts
-  liberation_ttf
+  # Separate stuff.
   inputs.browser-previews.packages.${pkgs.system}.google-chrome-dev # Browser.
   oh-my-zsh
   # Programming Languages
@@ -30,6 +33,5 @@
   hyprlock
   hyprpaper
   hyprland
-  swaync
   ];
 }
